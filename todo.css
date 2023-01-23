@@ -1,0 +1,141 @@
+
+.section {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border-bottom: 0ch;
+}
+.fill-form {
+    padding-left: 10px; 
+    padding-right: 30px; 
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    border-color: white;
+    
+
+}
+.date-control{
+    height: 30px;
+    width: 4s0px;
+    background-color: rgb(255, 255, 255);
+}
+.form-control{
+  height: 30px;
+  width: 100px;
+}
+.form-control-1{
+    width: 400px;
+    height: 110px;
+}
+.todo {
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 10px;
+    text-align: center;
+    align-items: center;
+  }
+  .header {
+    color: green;
+    font-weight: bold;
+  }
+  .container {
+     display: flex;
+     flex-direction: row;
+     margin-inline: auto;
+     border-left: 3px solid green;
+     border-right: 3px solid green;
+  
+  }
+
+.tasks {
+   text-align: center; 
+   border-right: 2px solid green;
+   border-left: 2px solid green;
+   width: 600px;
+}
+.task-list{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 8px;
+    list-style: none;
+}
+.completed{
+    text-align: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 600px;
+}
+.tasks-complete{
+    margin-bottom: 2px;
+}
+#tasks2{
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  width: 30vw;
+}
+.modal-btn {
+  background-color: #d41818;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.add-btn{
+  background-color: green;
+  padding: 20px 30px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+}
+.btn-delete{
+  background-color: black;
+  height: 60px;
+  width: 50px;
+  border-radius: 2px ;
+  margin-bottom: 0px;
+  color: rgb(255, 255, 255);
+
+}
+.text-body input{
+  width: 300px;
+}
+.title-text{
+    font-size: 25px;
+    font-weight: bolder;
+    color: green;
+  }
+  tasks-title{
+    color: green;
+    font-size: 20px;
+  }
+  .modal-title{
+    color: green;
+    font-weight: bolder;
+    font-size: 20px;
+
+  }
+.msg{
+    color: green; 
+}
+#tasks div .options {
+    justify-self: center;
+    display: flex;
+    gap: 20px;
+  }
+  .date-text{
+    font-size: large;;
+    margin-top: 20px;
+  }
+  .hr{
+    color: green;
+  }
+.text-center .h2{
+    color: red;
+  }
