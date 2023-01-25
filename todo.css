@@ -4,8 +4,9 @@
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   border-bottom: 0ch;
+  
 }
-.fill-form {
+.jaza-form {
     padding-left: 10px; 
     padding-right: 30px; 
     border-radius: 8px;
@@ -15,25 +16,29 @@
     
 
 }
-.date-control{
+.date1{
     height: 30px;
-    width: 4s0px;
+    width: 200px;
     background-color: rgb(255, 255, 255);
 }
-.form-control{
-  height: 30px;
+.form1{
+  height: 50px;
   width: 100px;
 }
-.form-control-1{
-    width: 400px;
+.form2{
+    width: 100px;
     height: 110px;
+    
 }
-.todo {
+.todo-app {
     padding-top: 30px;
     padding-left: 0px;
     padding-right: 10px;
     text-align: center;
     align-items: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bolder;
   }
   .header {
     color: green;
@@ -43,23 +48,27 @@
      display: flex;
      flex-direction: row;
      margin-inline: auto;
-     border-left: 3px solid green;
-     border-right: 3px solid green;
+     /* border-left: 3px solid green;
+     border-right: 3px solid green; */
   
   }
 
-.tasks {
+.tasks1 {
    text-align: center; 
-   border-right: 2px solid green;
-   border-left: 2px solid green;
+   display: flex;
+   /* border-right: 2px solid green;
+   border-left: 2px solid green; */
    width: 600px;
 }
 .task-list{
     display: flex;
     flex-direction: column;
     padding-top: 0px;
-    background-color: white;
+    background-color: lightseagreen;
+    color: black;
     margin: 5px;
+    width: 400px;
+    height: 250px;
     border-radius: 8px;
     list-style: none;
 }
@@ -68,7 +77,18 @@
     align-items: center;
     border-radius: 8px;
     width: 600px;
+    background-color: gold;
+
 }
+.incompleted{
+  text-align: center;
+  align-items: center;
+  border-radius: 8px;
+  width: 600px;
+  background-color: lightcoral;
+
+}
+
 .tasks-complete{
     margin-bottom: 2px;
 }
@@ -78,7 +98,7 @@
   grid-template-columns: repeat(1, 2fr);
   width: 30vw;
 }
-.modal-btn {
+.fill-btn {
   background-color: #d41818;
   border: none;
   color: rgb(255, 255, 255);
@@ -87,12 +107,13 @@
   border-radius: 3px;
   text-decoration: none;
 }
-.add-btn{
-  background-color: green;
-  padding: 20px 30px;
-  border-radius: 3px;
+.submit-btn{
+  background-color: black;
+  padding: 10px;
+  border-radius: 0px;
   text-decoration: none;
   color: #fff;
+  margin-top: 40px;
 }
 .btn-delete{
   background-color: black;
@@ -103,8 +124,10 @@
   color: rgb(255, 255, 255);
 
 }
-.text-body input{
-  width: 300px;
+.text-body1 {
+  width: 400px;
+  height: 500px;
+  background-color: lightblue;
 }
 .title-text{
     font-size: 25px;
@@ -115,19 +138,21 @@
     color: green;
     font-size: 20px;
   }
-  .modal-title{
+  .fill-title{
     color: green;
     font-weight: bolder;
     font-size: 20px;
 
   }
 .msg{
-    color: green; 
+    color: pink; 
+    font-size: 15px;
+    font-weight: bold;
 }
 #tasks div .options {
     justify-self: center;
     display: flex;
-    gap: 20px;
+    gap: 10px;
   }
   .date-text{
     font-size: large;;
@@ -138,4 +163,32 @@
   }
 .text-center .h2{
     color: red;
+
+  }
+  .btn-delete{
+background-color: red;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 60px;
+height: 30px;
+
+  }
+  .btn-done{
+background-color: black ;
+padding: 10px;
+display: flex;
+color: white;
+justify-content: center;
+align-items: center;
+width: 200px;
+
+  }
+  .btn-update{
+background-color: yellow;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
   }

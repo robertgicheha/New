@@ -1,6 +1,6 @@
 let form = document.getElementById("form-1")
-let textInput = document.getElementById("textInput");
-let dateInput = document.getElementById("dateInput");
+let textJaza = document.getElementById("textJaza");
+let dateJaza = document.getElementById("dateJaza");
 let textarea = document.getElementById("descriptionArea");
 let text = document.getElementById("text");
 let tasks = document.getElementById("tasks");
@@ -12,9 +12,9 @@ let add = document.getElementById("add");
   
   const addData = () => {
     todoData.push({
-      text: textInput.value,
+      text: textJaza.value,
       description: textarea.value,
-      date: dateInput.value,
+      date: dateJaza.value,
     });
   
     localStorage.setItem("todoData", JSON.stringify(todoData));
@@ -23,28 +23,28 @@ let add = document.getElementById("add");
   
   
   const resetForm = () => {
-    textInput.value = "";
+    textJaza.value = "";
     textarea.value = "";
-    dateInput.value = "";
+    dateJaza.value = "";
   };
   
   
   let createTasks = () => {
-     tasks.innerHTML = "";
+     tasks1.innerHTML = "";
     todoData.forEach((x, y) => {
-      return (tasks.innerHTML += `
+      return (tasks1.innerHTML += `
         <li  id=${y} class='task-list'>
-        <span class="btn-utils">
-        <button onClick= "editTask(this)" class = "open-modal edit" data-target="modal-1"> Edit</button>
-        <button onClick ="deleteTask(this);createTasks()" class="btn-delete">X</button>
+        <span class="btn-options">
+        <button onClick= "editTask(this)" class = "btn-update" data-target="fill-1">UPDATE</button>
+        <button onClick ="deleteTask(this);createTasks()" class="btn-delete">REMOVE</button>
       </span>
          
           <span class="title-text">${x.text}</span>
           <br />
           <p>${x.description}</p>
           <br />
-          <span class="date-text">Due date: ${x.date}</span><br />
-          <button  class="click-button" onClick="changeListener(this)" >Done</button><br />
+          <span class="date-text">Date is:${x.date}</span><br />
+          <button  class="btn-done" onClick="changeListener(this)" >OK</button><br />
          
         </li>
       `);
@@ -68,9 +68,9 @@ let add = document.getElementById("add");
     let selectedTask = e.parentElement.parentElement;
     console.log(selectedTask)
   
-    textInput.value = selectedTask.children[1].innerHTML;
+    textJaza.value = selectedTask.children[1].innerHTML;
     textarea.value = selectedTask.children[3].innerHTML;
-    dateInput.value = selectedTask.children[4].innerHTML;
+    dateJaza.value = selectedTask.children[4].innerHTML;
   
     deleteTask(e);
   };
@@ -113,15 +113,15 @@ form.addEventListener("submit", (e) => {
     
       checkdueDateDIfference =() =>{
         if(diffInDays > 0){
-          return `congratulations!! completed the task earlier by ${diffInDays} days `
+          return `Bravo, you  are before time by ${diffInDays} days `
         }
         else if(diffInDays < 0){
           console.log(diffInDays);
-          return ` Ooops! you are late by ${diffInDays * (-1) } days `
+          return ` Overdue by ${diffInDays * (-1) } days `
   
         }
         else{
-          return `<span>You completed this task on time</span>`
+          return `<span>You are on time</span>`
         }
       }
       return (tasks2.innerHTML += `
@@ -129,9 +129,9 @@ form.addEventListener("submit", (e) => {
       <span class="warning-dueDate">${checkdueDateDIfference()}</span>
       <span class="title-text">${x.text}</span>
       <p>${x.description}</p>
-      <span class="date-text">Due date: ${x.date}</span>
-      <span class="btn-utils">
-        <button onClick ="deleteCompletedTask(this);createTasks()" class="btn-delete"> X</button>
+      <span class="date-text">Date is:${x.date}</span>
+      <span class="btn-options">
+        <button onClick ="deleteCompletedTask(this);createTasks()" class="btn-delete"> REMOVE</button>
       </span>
     </li>
       `);
@@ -146,7 +146,7 @@ form.addEventListener("submit", (e) => {
   })();
 
   let formValidation = () => {
-    if (textInput.value === "") {
+    if (textJaza.value === "") {
       console.log("failure");
       text.innerHTML = "Add task";
     } else {

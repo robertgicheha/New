@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tasks</title>
+  <title>ToDo Tasks App</title>
   <link rel="stylesheet" href="./todo.css" />
 </head>
+
 <body>
-   <div class="todo">
-     <h1 class="header">ToDo App</h1><hr />
-     <div class="container">
-       <div class="section">
-          <form class="fill-form" id="form-1">
-            <div class="fill-container">
-              <div class="task-header">
-                <h2 class="modal-title" id="modal-task" data-target="modal">
-                  Task
-                </h2>
-              </div>
-              <div class="text-body">
-                <p class="tasks-title">Enter Task</p>
-                <input type="text" class="form-control" name="" id="textInput" />
-                <div id="text"></div>
-                <br />
-                <p class="tasks-title">Description</p>
-                <textarea
-                name=""
-                class="form-control-1"
-                id="descriptionArea"
-              ></textarea>
-              <br />
-              <p class="tasks-title">Date</p>
-              <input type="date" class="date-control" name="" id="dateInput" />
-              </div><br />
+  <div class="todo-app">
+    <h1 class="header">ToDo Tasks App</h1>
+    
+    <div class="container">
+      <div class="section">
+        <form class="jaza-form" id="form-1">
+          <div class="jaza-container">
+            <div class="task-header">
+              <h2 class="fill-title" id="fill-task" data-target="fill">
+                Task
+              </h2>
+            </div>
+            <div class="text-body1">
+              <p class="tasks-title">Enter Task</p>
+              <input type="text" class="form1" name="" id="textJaza" />
+              <div id="text"></div>
+              
+              <p class="tasks-title1">Description</p>
+              <textarea name="" class="form2" id="descriptionArea"></textarea>
+              
+              <p class="tasks-title2">Date</p>
+              <input type="date" class="date1" name="" id="dateJaza" />
               <div class="form-footer">
-                <button type="submit" id="add" class="add-btn">Add</button>
+                <button type="submit" id="submit" class="submit-btn">DONE</button>
               </div>
             </div>
-          </form>
-       </div>
-       <div class="tasks">
-        <h2 class="text-center">Incomplete Tasks</h2>
-        <hr />
-        <ul id="tasks"></ul>
-       </div>
-       <div class="completed">
-        <h2 class="tasks-complete">Completed Tasks</h2><hr />
+            
+          </div>
+        </form>
+      </div>
+      <div class="incompleted">
+        <h2 class="tasks-incomplete">Incomplete Tasks</h2>
+
+        <ul id="tasks1"></ul>
+      </div>
+      <div class="completed">
+        <h2 class="tasks-complete">Completed Tasks</h2>
         <ul id="tasks2"></ul>
-       </div>
-     </div>
-   </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="./ToDoApp.js"></script>
+
 </html>
